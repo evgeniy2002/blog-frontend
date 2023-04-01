@@ -1,0 +1,29 @@
+@mixin delay($time) {
+  transition: $time;
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -ms-transition: $time;
+  -o-transition: $time;
+}
+// @mixin rotate($deg) {
+//   transform: rotate($deg);
+//   -webkit-transform: rotate($deg);
+//   -moz-transform: rotate($deg);
+//   -ms-transform: rotate($deg);
+//   -o-transform: rotate($deg);
+// }
+// @mixin scale($size) {
+//   transform: scale($size);
+//   -webkit-transform: scale($size);
+//   -moz-transform: scale($size);
+//   -ms-transform: scale($size);
+//   -o-transform: scale($size);
+// }
+
+@mixin transformAnimate($scale, $deg, $translate) {
+  transform: scale($scale) rotate($deg) translateY($translate);
+  -webkit-transform: scale($scale) rotate($deg) translateY($translate);
+  -moz-transform: scale($scale) rotate($deg) translateY($translate);
+  -ms-transform: scale($scale) rotate($deg) translateY($translate);
+  -o-transform: scale($scale) rotate($deg) translateY($translate);
+}

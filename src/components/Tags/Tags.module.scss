@@ -1,0 +1,77 @@
+@import "../../scss/variables";
+@import "../../scss/mixins.scss";
+
+.tags {
+  position: sticky;
+  top: 20px;
+  flex: 0 1 25%;
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 2rem;
+  @include delay(0.3s);
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+  @media (max-width: 675px) {
+    display: none;
+  }
+  &_row {
+    display: flex;
+    flex-direction: column;
+  }
+  &_columns {
+    flex: 1 1 100%;
+    &:not(:last-of-type) {
+      margin: 0 0rem 1.5rem 0;
+
+      @media (max-width: 768px) {
+        margin: 0 0rem 1rem 0;
+      }
+    }
+  }
+  &_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $colorText;
+    text-decoration: none;
+    cursor: pointer;
+    @include delay(0.3s);
+
+    span {
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      color: $hoverColor;
+      @include delay(0.3s);
+    }
+  }
+}
+.tags_dark {
+  @include delay(0.3s);
+  background-color: $bgBlue;
+
+  .tags_item {
+    @include delay(0.3s);
+    color: $white;
+
+    &:hover {
+      color: $hoverColor;
+      @include delay(0.3s);
+    }
+  }
+}

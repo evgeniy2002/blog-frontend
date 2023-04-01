@@ -1,0 +1,24 @@
+@import "../../scss/variables";
+@import "../../scss/mixins.scss";
+
+.btn {
+  display: inline-flex;
+  border: none;
+  outline: none;
+  background-color: $btn;
+  color: $white;
+  line-height: 2.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  @include delay(0.3s);
+  &:hover {
+    @include delay(0.3s);
+    background-color: #4338ca;
+  }
+}
